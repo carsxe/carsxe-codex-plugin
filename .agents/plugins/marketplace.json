@@ -1,0 +1,20 @@
+{
+  "name": "carsxe-plugins",
+  "interface": {
+    "displayName": "CarsXE Plugins"
+  },
+  "plugins": [
+    {
+      "name": "carsxe",
+      "source": {
+        "source": "local",
+        "path": "../../"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
