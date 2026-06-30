@@ -5,6 +5,12 @@ import { readFileSync, existsSync } from 'fs';
 import { homedir } from 'os';
 import { join } from 'path';
 
+// 1. Already set in environment — nothing to do
+if (process.env.CARSXE_API_KEY) {
+  process.exit(0);
+}
+
+// 2. Saved to config file — inject into session env
 const configDir  = process.env.PLUGIN_DATA || process.env.CLAUDE_PLUGIN_DATA || join(homedir(), '.carsxe');
 const configPath = join(configDir, 'config.json');
 
@@ -12,7 +18,6 @@ if (existsSync(configPath)) {
   try {
     const { api_key } = JSON.parse(readFileSync(configPath, 'utf8'));
     if (api_key && api_key.length > 0) {
-      // Inject key into session env — Codex reads {"env":{...}} from hook stdout
       process.stdout.write(JSON.stringify({ env: { CARSXE_API_KEY: api_key } }));
       process.exit(0);
     }
