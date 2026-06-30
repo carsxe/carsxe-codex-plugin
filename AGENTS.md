@@ -6,16 +6,18 @@ recalls, liens, OBD codes, vehicle images, or anything related to vehicle data.
 
 ## API Key
 
-Every request requires a CarsXE API key, read from the `CARSXE_API_KEY` environment variable.
+Every request requires a CarsXE API key. The `SessionStart` hook loads it automatically from
+disk into `CARSXE_API_KEY` at the start of each session.
 
-Get a key from https://api.carsxe.com/dashboard/developer, then set it before launching Codex:
+**First-time setup:** If `CARSXE_API_KEY` is not set at session start, immediately ask the user:
 
-- **macOS / Linux (bash/zsh):** `export CARSXE_API_KEY="cxe_live_YOUR_KEY"`
-- **Windows (PowerShell):** `$env:CARSXE_API_KEY="cxe_live_YOUR_KEY"`
-- **Persist it** by exporting `CARSXE_API_KEY` in your shell profile, or add it under `[shell_environment_policy]`
-  / a project `.env` so Codex sessions inherit it.
+> "To use CarsXE, I need your API key. Get one free at https://api.carsxe.com/dashboard/developer,
+> then tell me: 'Set my CarsXE API key to YOUR_KEY'."
 
-If `CARSXE_API_KEY` is missing or empty, tell the user to set it as shown above before retrying.
+Once the user provides the key, invoke the `auth` skill to validate and persist it.
+After that, the hook loads it automatically on every future session — the user never needs to set it again.
+
+If `CARSXE_API_KEY` is missing mid-session, prompt the same way before making any API call.
 
 ## Base URL & Required Params
 
