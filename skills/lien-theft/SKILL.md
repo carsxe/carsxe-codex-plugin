@@ -1,6 +1,7 @@
 ---
 name: lien-theft
 description: Check for active liens and theft records on a vehicle by VIN using the CarsXE API. Use this when a user asks whether a car has a lien, is stolen, or wants to verify ownership is clean before buying.
+license: MIT
 ---
 
 When the user asks about liens, theft status, or ownership encumbrances on a vehicle:

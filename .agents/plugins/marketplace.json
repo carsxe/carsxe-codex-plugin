@@ -7,8 +7,9 @@
     {
       "name": "carsxe",
       "source": {
-        "source": "local",
-        "path": "../../"
+        "source": "github",
+        "repo": "carsxe/carsxe-codex-plugin",
+        "branch": "main"
       },
       "policy": {
         "installation": "AVAILABLE",

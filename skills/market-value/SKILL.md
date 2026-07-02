@@ -1,6 +1,7 @@
 ---
 name: market-value
 description: Get the current market value of a vehicle from its VIN using the CarsXE API. Use this when a user asks how much a car is worth, wants to know its value, or is thinking about buying/selling a vehicle.
+license: MIT
 ---
 
 When the user asks about a vehicle's price, worth, or market value and has a VIN:

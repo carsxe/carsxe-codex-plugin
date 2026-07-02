@@ -49,12 +49,12 @@ Codex skills read your key from `CARSXE_API_KEY`. Set it before launching Codex:
 
 ```bash
 # macOS / Linux
-export CARSXE_API_KEY="cxe_live_YOUR_KEY"
+export CARSXE_API_KEY="YOUR_API_KEY_HERE"
 ```
 
 ```powershell
 # Windows (PowerShell)
-$env:CARSXE_API_KEY="cxe_live_YOUR_KEY"
+$env:CARSXE_API_KEY="YOUR_API_KEY_HERE"
 ```
 
 Add it to your shell profile to persist it across sessions.

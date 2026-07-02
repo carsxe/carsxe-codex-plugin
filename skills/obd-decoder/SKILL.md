@@ -1,6 +1,7 @@
 ---
 name: obd-decoder
 description: Decode an OBD-II diagnostic trouble code (DTC) using the CarsXE API. Use this when a user mentions a check engine light code, DTC, or OBD code like P0300, C1234, B0001, or U0100.
+license: MIT
 ---
 
 When the user mentions an OBD/DTC code and wants to know what it means:

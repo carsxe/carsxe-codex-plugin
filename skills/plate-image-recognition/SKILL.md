@@ -1,6 +1,7 @@
 ---
 name: plate-image-recognition
 description: Extract a license plate number from an image URL using the CarsXE Plate Recognition API. Use this when a user shares a photo of a vehicle or license plate and wants to identify the plate number.
+license: MIT
 ---
 
 When the user shares an image containing a license plate and wants to extract the plate number:

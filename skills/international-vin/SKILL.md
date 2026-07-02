@@ -1,6 +1,7 @@
 ---
 name: international-vin
 description: Decode an international (non-US) VIN using the CarsXE API. Use this when a user provides a VIN from a European, Asian, or other non-US vehicle and wants to decode it.
+license: MIT
 ---
 
 When the user provides a VIN that appears to be from a non-US vehicle (European, Asian, etc.):

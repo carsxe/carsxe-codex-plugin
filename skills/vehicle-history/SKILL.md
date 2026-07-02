@@ -1,6 +1,7 @@
 ---
 name: vehicle-history
 description: Retrieve a vehicle history report from a VIN using the CarsXE API. Use this when a user wants to know a car's history — past owners, accidents, title status, odometer readings, or whether it's been in a crash.
+license: MIT
 ---
 
 When the user asks about a vehicle's history, past accidents, title status, or ownership:

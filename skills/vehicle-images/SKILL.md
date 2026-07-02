@@ -1,6 +1,7 @@
 ---
 name: vehicle-images
 description: Retrieve images of a vehicle by make, model, and year using the CarsXE API. Use this when a user wants to see what a vehicle looks like or asks for photos of a specific car.
+license: MIT
 ---
 
 When the user asks to see images or photos of a vehicle (by make, model, year):

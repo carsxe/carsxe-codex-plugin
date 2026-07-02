@@ -1,6 +1,7 @@
 ---
 name: year-make-model
 description: Look up vehicle data by Year, Make, and Model using the CarsXE YMM API. Use this when a user doesn't have a VIN but knows the year, make, and model of a vehicle and wants specs, trims, or features.
+license: MIT
 ---
 
 When the user asks about a vehicle by year, make, and model (without a VIN):
