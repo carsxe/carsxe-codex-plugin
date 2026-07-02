@@ -28,26 +28,15 @@
     "year-make-model",
     "international-vin"
   ],
-  "skills": "./skills",
-  "hooks": "./hooks/hooks.json",
+  "skills": "./skills/",
   "interface": {
     "displayName": "CarsXE",
     "shortDescription": "Decode VINs, plates, market value, history, recalls, liens, and OBD codes — the full CarsXE vehicle data suite.",
     "longDescription": "CarsXE brings the full suite of CarsXE vehicle data APIs into OpenAI Codex as 12 auto-invoked skills. Decode any VIN for full specifications, look up vehicles from a license plate, estimate market value, pull a full vehicle history report, check open safety recalls, screen for liens and theft, decode international (non-US) VINs, extract a VIN or plate number straight from a photo, look up vehicles by Year/Make/Model, and decode OBD-II diagnostic trouble codes. Codex selects the right skill automatically from your request, or call any skill explicitly with its name. Requires a CarsXE API key (free signup at api.carsxe.com).",
     "developerName": "CarsXE",
-    "category": "Productivity",
+    "category": "Data & Analytics",
     "capabilities": [
-      "VIN decoding & full vehicle specifications",
-      "License plate lookup",
-      "Market value estimation",
-      "Vehicle history reports",
-      "Open safety recall checks",
-      "Lien & theft screening",
-      "International (non-US) VIN decoding",
-      "VIN OCR from images",
-      "License plate OCR from images",
-      "Year/Make/Model lookups",
-      "OBD-II diagnostic trouble code decoding"
+      "Read"
     ],
     "websiteURL": "https://api.carsxe.com",
     "privacyPolicyURL": "https://api.carsxe.com/privacy-policy",
