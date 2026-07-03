@@ -49,6 +49,8 @@
       "What does OBD code P0300 mean?"
     ],
     "brandColor": "#2563EB",
-    "logo": "./assets/logo.png"
+    "logo": "./assets/logo.png",
+    "composerIcon": "./assets/logo.png",
+    "screenshots": ["./assets/screenshot-vin-decode.png"]
   }
 }
