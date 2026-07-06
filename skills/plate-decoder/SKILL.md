@@ -2,6 +2,8 @@
 name: plate-decoder
 description: Look up vehicle information from a license plate number using the CarsXE API. Use this when a user mentions a license plate and wants to know what vehicle it belongs to.
 license: MIT
+version: 1.0.0
+author: CarsXE
 ---
 
 When the user provides a license plate number:

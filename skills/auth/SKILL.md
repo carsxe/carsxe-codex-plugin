@@ -2,6 +2,8 @@
 name: auth
 description: Set and save the CarsXE API key. Use this when the user provides a CarsXE API key, asks to configure the plugin, or when the session starts without a key loaded.
 license: MIT
+version: 1.0.0
+author: CarsXE
 ---
 
 When the user provides a CarsXE API key or asks to configure the plugin:

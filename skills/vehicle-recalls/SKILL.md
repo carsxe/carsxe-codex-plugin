@@ -2,6 +2,8 @@
 name: vehicle-recalls
 description: Check for open safety recalls on a vehicle using the CarsXE API. Use this when a user asks whether a car has any recalls, safety issues, or wants to know if their vehicle needs a recall repair.
 license: MIT
+version: 1.0.0
+author: CarsXE
 ---
 
 When the user asks about recalls or safety issues for a vehicle (by VIN):

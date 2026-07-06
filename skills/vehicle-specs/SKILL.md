@@ -2,6 +2,8 @@
 name: vehicle-specs
 description: Fetch full vehicle specifications from a VIN using the CarsXE API. Use this when the user provides a VIN and wants to know details about a vehicle (make, model, year, engine, trim, equipment, etc.).
 license: MIT
+version: 1.0.0
+author: CarsXE
 ---
 
 When the user provides a VIN and asks about vehicle specs, details, or information:

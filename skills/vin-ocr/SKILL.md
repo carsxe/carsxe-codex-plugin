@@ -2,6 +2,8 @@
 name: vin-ocr
 description: Extract a VIN from a photo or image URL using the CarsXE VIN OCR API. Use this when a user shares an image of a vehicle or VIN plate and wants to identify the VIN.
 license: MIT
+version: 1.0.0
+author: CarsXE
 ---
 
 When the user shares an image containing a VIN (photo of dashboard, door jamb, windshield, etc.):
