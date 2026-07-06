@@ -29,6 +29,7 @@
     "international-vin"
   ],
   "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "CarsXE",
     "shortDescription": "Decode VINs, plates, market value, history, recalls, liens, and OBD codes — the full CarsXE vehicle data suite.",

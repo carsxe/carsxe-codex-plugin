@@ -1,0 +1,20 @@
+{
+  "name": "carsxe-plugins",
+  "interface": {
+    "displayName": "CarsXE Plugins"
+  },
+  "plugins": [
+    {
+      "name": "carsxe",
+      "source": {
+        "source": "local",
+        "path": "./plugins/carsxe"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Data & Analytics"
+    }
+  ]
+}
