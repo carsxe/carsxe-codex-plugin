@@ -20,7 +20,7 @@ jobs:
         run: python3 -m pip install "cryptography<49" --quiet
 
       - name: HOL Plugin Scanner
-        uses: hashgraph-online/ai-plugin-scanner-action@6907377fe3d83dcd305ffd1e885b15911853467b  # v1
+        uses: hashgraph-online/ai-plugin-scanner-action@cc44948e99065212260df501c2ecb6ed5de4201b  # v1
         with:
           plugin_dir: "."
           mode: scan
