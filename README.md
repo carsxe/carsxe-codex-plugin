@@ -2,7 +2,7 @@
 
 # CarsXE Plugin for OpenAI Codex
 
-Access the full suite of CarsXE vehicle data APIs directly from OpenAI Codex — decode VINs, look up license plates, get market values, check history, recalls, liens, OBD codes, and more.
+Access the full suite of CarsXE vehicle data APIs directly from OpenAI Codex — decode VINs, look up license plates, get market values, check history, recalls (VIN, YMM, or batch), YMM options, ownership, liens, OBD codes, and more.
 
 Codex auto-invokes the right skill based on what you ask. No slash commands to memorize — just describe what you need.
 
@@ -15,12 +15,16 @@ Codex auto-invokes the right skill based on what you ask. No slash commands to m
 | `market-value`            | Estimate a vehicle's current market value          |
 | `vehicle-history`         | Full vehicle history report                        |
 | `vehicle-images`          | Fetch vehicle photos by make/model/year            |
-| `vehicle-recalls`         | Check for open safety recalls                      |
+| `vehicle-recalls`         | Check for open safety recalls by VIN               |
+| `recalls-ymm`             | Check recalls by year/make/model (no VIN)          |
+| `recalls-batch`           | Bulk recalls: submit / status / results / download |
 | `international-vin`       | Decode international (non-US) VINs                 |
 | `vin-ocr`                 | Extract a VIN from a photo                          |
 | `lien-theft`              | Check for liens and theft records                  |
 | `plate-image-recognition` | Extract a license plate number from a photo        |
 | `year-make-model`         | Look up a vehicle by Year/Make/Model               |
+| `ymm-options`             | List year/make/model/trim/variant options          |
+| `ownership`               | Owner & resident lookup (Enterprise)               |
 | `obd-decoder`             | Decode an OBD-II diagnostic trouble code           |
 
 ## Installation
@@ -68,9 +72,13 @@ Just ask Codex naturally — the matching skill is invoked automatically:
 - _"What's this car worth? VIN WBAFR7C57CC811956, 45k miles, clean condition"_ → `market-value`
 - _"Get the history report for WBAFR7C57CC811956"_ → `vehicle-history`
 - _"Does 1C4JJXR64PW696340 have any open recalls?"_ → `vehicle-recalls`
+- _"Any recalls on a 2023 Toyota Camry?"_ → `recalls-ymm`
+- _"Check recalls for this list of VINs"_ → `recalls-batch`
 - _"Is this VIN stolen or have a lien? WBAFR7C57CC811956"_ → `lien-theft`
 - _"Decode this international VIN: WF0MXXGBWM8R43240"_ → `international-vin`
 - _"Look up a 2020 Toyota Camry LE"_ → `year-make-model`
+- _"What Toyota models were sold in 2023?"_ → `ymm-options`
+- _"Who is the registered owner of this VIN?"_ → `ownership`
 - _"What does check engine code P0300 mean?"_ → `obd-decoder`
 - _"Extract the VIN from this photo: https://example.com/vin.jpg"_ → `vin-ocr`
 - _"Read the plate in this image: https://example.com/plate.jpg"_ → `plate-image-recognition`
