@@ -2,7 +2,8 @@
 
 You have access to the full suite of CarsXE vehicle data APIs through this plugin's skills.
 Use them whenever a user asks about vehicles, VINs, license plates, vehicle values, history,
-recalls, liens, OBD codes, vehicle images, or anything related to vehicle data.
+recalls (VIN, year/make/model, or batch), YMM options, ownership, liens, OBD codes, vehicle
+images, or anything related to vehicle data.
 
 ## API Key
 
@@ -35,8 +36,13 @@ Append these to **every** request: `key=$CARSXE_API_KEY` and `source=codex_plugi
 | `vehicle-history`         | `/history`                          | GET    | `vin`                                                                                           |
 | `vehicle-images`          | `/images`                           | GET    | `make`, `model`; optional `year`, `trim`, `color`, `angle`, `photoType`, `size`, `transparent` |
 | `vehicle-recalls`         | `/v1/recalls`                       | GET    | `vin`                                                                                           |
+| `recalls-ymm`             | `/v1/recalls-ymm`                   | GET    | `year`, `make`, `model`                                                                         |
+| `recalls-batch`           | `/v1/recalls-batch/submit`          | POST   | JSON body `vins` and/or `csv` / `csvUrl`; optional `webhookUrl`                                 |
+| `recalls-batch`           | `/v1/recalls-batch/status\|results\|download` | GET | `batchId`                                                                                   |
 | `international-vin`       | `/v1/international-vin-decoder`      | GET    | `vin`                                                                                           |
 | `year-make-model`         | `/v1/ymm`                           | GET    | `year`, `make`, `model`; optional `trim`                                                        |
+| `ymm-options`             | `/v1/ymm-options`                   | GET    | optional `dimension`, `year`, `make`, `model`, `trim`                                           |
+| `ownership`               | `/v1/ownership/vin\|person\|address\|zip` | GET | VIN / name+address+zip / address+zip / zip; optional `include`                            |
 | `obd-decoder`             | `/obdcodesdecoder`                  | GET    | `code`                                                                                          |
 | `vin-ocr`                 | `/v1/vinocr`                        | POST   | JSON body `{"image": "<URL>"}`                                                                  |
 | `plate-image-recognition` | `/platerecognition`                 | POST   | JSON body `{"image": "<URL>"}`                                                                  |
@@ -50,4 +56,7 @@ Append these to **every** request: `key=$CARSXE_API_KEY` and `source=codex_plugi
 - When decoding OBD codes, include severity context (immediate attention vs. can wait).
 - For image-based skills (VIN OCR, plate recognition), offer to follow up with a decode after extraction.
 - Chain skills when helpful — e.g. decode a plate to a VIN, then run recalls + lien/theft on that VIN.
+- Route recalls by input: VIN → `vehicle-recalls`; year/make/model → `recalls-ymm`; many VINs → `recalls-batch`.
+- Route YMM browse vs specs: dropdowns / "what years was X sold" → `ymm-options`; full specs → `year-make-model`.
+- Ownership is Enterprise-only and billed per returned record. Do not call `/v1/ownership/phone`. Street `address` is street only.
 - CarsXE sometimes returns HTTP 200 with an `error` field in the body — always check it.
